@@ -6,9 +6,8 @@ use \Core\View;
 
 /**
  * Home controller
- *
- * PHP version 5.4
  */
+
 class Home extends \Core\Controller
 {
 
@@ -19,8 +18,8 @@ class Home extends \Core\Controller
      */
     protected function before()
     {
-        //echo "(before) ";
-        //return false;
+      //  echo "(before) ";
+        //return false; // just before() function will be executed 
     }
 
     /**
@@ -30,7 +29,7 @@ class Home extends \Core\Controller
      */
     protected function after()
     {
-        //echo " (after)";
+       // echo " (after)";
     }
 
     /**
@@ -43,7 +42,7 @@ class Home extends \Core\Controller
         //echo 'Hello from the index action in the Home controller!';
         View::render('Home/index.php', [
             'name' => 'Dave',
-            'colours' => ['red', 'green', 'blue']
+            'colours' => ['red', 'green', 'blue' , 'pink']
         ]);
     }
 }

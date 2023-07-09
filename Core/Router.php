@@ -4,9 +4,8 @@ namespace Core;
 
 /**
  * Router
- *
- * PHP version 5.4
  */
+
 class Router
 {
 
@@ -112,7 +111,7 @@ class Router
             //$controller = "App\Controllers\\$controller";
             $controller = $this->getNamespace() . $controller;
 
-            if (class_exists($controller)) {
+            /*if (class_exists($controller)) {
                 $controller_object = new $controller($this->params);
 
                 $action = $this->params['action'];
@@ -124,7 +123,21 @@ class Router
                 } else {
                     echo "Method $action (in controller $controller) not found";
                 }
-            } else {
+            } */ 
+            if (class_exists($controller)) {
+                $controller_object = new $controller($this->params);
+
+                $action = $this->params['action'];
+                $action = $this->convertToCamelCase($action);
+
+                if (preg_match('/action$/i', $action) == 0) {
+                    $controller_object->$action();
+
+                } else {
+                    throw new \Exception("Method $action in controller $controller cannot be called directly - remove the Action suffix to call this method");
+                }
+            }
+            else {
                 echo "Controller class $controller not found";
             }
         } else {
