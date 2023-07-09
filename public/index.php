@@ -1,9 +1,7 @@
-<?php
+ <?php
 
 /**
  * Front controller
- *
- * PHP version 5.4
  */
 
 /**
