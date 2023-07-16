@@ -9,9 +9,9 @@
  */
 
  //require_once '/path/to/vendor/autoload.php';
- require_once dirname(__DIR__) . '/vendor/vendor/autoload.php';
+ //require_once dirname(__DIR__) . '/vendor/vendor/autoload.php';
 
-
+require '../vendor/vendor/autoload.php';
 /**
  * Autoloader
  */
