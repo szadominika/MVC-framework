@@ -47,7 +47,8 @@ abstract class Controller
                 $this->after();
             }
         } else {
-            echo "Method $method not found in controller " . get_class($this);
+            //echo "Method $method not found in controller " . get_class($this);
+            throw new \Exception("Method $method not found in comtroller " . get_class($this));
         }
     }
 

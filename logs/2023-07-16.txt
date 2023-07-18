@@ -1,0 +1,41 @@
+[16-Jul-2023 17:15:19 Europe/Berlin] Uncaught exception: 'Exception' with message 'NO route matched.'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\public\index.php(47): Core\Router->dispatch('products')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\Router.php' on line 147
+[16-Jul-2023 17:15:19 Europe/Berlin] Uncaught exception: 'Exception' with message 'NO route matched.'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\public\index.php(47): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\Router.php' on line 147
+[16-Jul-2023 17:21:11 Europe/Berlin] Uncaught exception: 'Exception' with message 'NO route matched.'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\public\index.php(47): Core\Router->dispatch('products')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\Router.php' on line 147
+[16-Jul-2023 17:21:11 Europe/Berlin] Uncaught exception: 'Exception' with message 'NO route matched.'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\public\index.php(47): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\Router.php' on line 147
+[16-Jul-2023 17:22:46 Europe/Berlin] Uncaught exception: 'Exception' with message 'NO route matched.'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\public\index.php(47): Core\Router->dispatch('products')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\Router.php' on line 147
+[16-Jul-2023 17:23:55 Europe/Berlin] Uncaught exception: 'Exception' with message 'NO route matched.'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\public\index.php(47): Core\Router->dispatch('products')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\Router.php' on line 147
+[16-Jul-2023 17:24:37 Europe/Berlin] Uncaught exception: 'Twig\Error\LoaderError' with message 'Unable to find template "Home/inde.html" (looked into: C:\xampp\htdocs\www\MVC/App/Views).'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\vendor\vendor\twig\twig\src\Loader\FilesystemLoader.php(131): Twig\Loader\FilesystemLoader->findTemplate('Home/inde.html')
+#1 C:\xampp\htdocs\www\MVC\vendor\vendor\twig\twig\src\Environment.php(264): Twig\Loader\FilesystemLoader->getCacheKey('Home/inde.html')
+#2 C:\xampp\htdocs\www\MVC\vendor\vendor\twig\twig\src\Environment.php(312): Twig\Environment->getTemplateClass('Home/inde.html')
+#3 C:\xampp\htdocs\www\MVC\vendor\vendor\twig\twig\src\Environment.php(280): Twig\Environment->load('Home/inde.html')
+#4 C:\xampp\htdocs\www\MVC\Core\View.php(42): Twig\Environment->render('Home/inde.html', Array)
+#5 C:\xampp\htdocs\www\MVC\App\Controllers\Home.php(49): Core\View::renderTemplate('Home/inde.html', Array)
+#6 [internal function]: App\Controllers\Home->indexAction()
+#7 C:\xampp\htdocs\www\MVC\Core\Controller.php(46): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('index', Array)
+#9 C:\xampp\htdocs\www\MVC\public\index.php(47): Core\Router->dispatch('')
+#10 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\vendor\vendor\twig\twig\src\Loader\FilesystemLoader.php' on line 227
+[16-Jul-2023 17:27:23 Europe/Berlin] Uncaught exception: 'Exception' with message 'NO route matched.'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\public\index.php(47): Core\Router->dispatch('products')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\Router.php' on line 147
