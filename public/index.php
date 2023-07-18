@@ -10,7 +10,7 @@
 
  //require_once '/path/to/vendor/autoload.php';
  //require_once dirname(__DIR__) . '/vendor/vendor/autoload.php';
-
+//phpinfo();
 require '../vendor/vendor/autoload.php';
 /**
  * Autoloader
@@ -22,6 +22,13 @@ spl_autoload_register(function ($class) {
         require $root . '/' . str_replace('\\', '/', $class) . '.php';
     }
 });
+
+/**
+ * Error and Exceptions handling
+ */
+error_reporting(E_ALL);
+set_error_handler('Core\Error::errorHandler');
+set_exception_handler('Core\Error::exceptionHandler');
 
 
 /**
