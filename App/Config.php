@@ -19,13 +19,13 @@ class Config
      * Database name
      * @var string
      */
-    const DB_NAME = 'mvc';
+    const DB_NAME = 'mvcuser';
 
     /**
      * Database user
      * @var string
      */
-    const DB_USER = 'mvc';
+    const DB_USER = 'mvcuser';
 
     /**
      * Database password

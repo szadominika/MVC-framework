@@ -12,6 +12,7 @@
  //require_once dirname(__DIR__) . '/vendor/vendor/autoload.php';
 //phpinfo();
 require '../vendor/vendor/autoload.php';
+//require dirname(__DIR__) . '/vendor/vendor/autoload.php';
 /**
  * Autoloader
  */
@@ -39,9 +40,9 @@ $router = new Core\Router();
 // Add the routes
 $router->add('', ['controller' => 'Home', 'action' => 'index']);
 $router->add('{controller}/{action}');
-$router->add('{controller}/{id:\d+}/{action}');
-$router->add('admin/{controller}/{action}', ['namespace' => 'Admin']);
-$router->add('try/{controller}/{action}', ['namespace' => 'Try']); 
+//$router->add('{controller}/{id:\d+}/{action}');
+//$router->add('admin/{controller}/{action}', ['namespace' => 'Admin']);
+//$router->add('try/{controller}/{action}', ['namespace' => 'Try']); 
 // you add the url (how it looks in the browser == the pattern of the path)
     
 $router->dispatch($_SERVER['QUERY_STRING']);

@@ -1,0 +1,118 @@
+[23-Jul-2023 11:26:25 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "Twig\Loader\FilesystemLoader" not found'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\App\Controllers\Home.php(49): Core\View::renderTemplate('Home/index.html', Array)
+#1 [internal function]: App\Controllers\Home->indexAction()
+#2 C:\xampp\htdocs\www\MVC\Core\Controller.php(46): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('index', Array)
+#4 C:\xampp\htdocs\www\MVC\public\index.php(48): Core\Router->dispatch('')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\View.php' on line 38
+[23-Jul-2023 11:26:25 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "Twig\Loader\FilesystemLoader" not found'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\App\Controllers\Home.php(49): Core\View::renderTemplate('Home/index.html', Array)
+#1 [internal function]: App\Controllers\Home->indexAction()
+#2 C:\xampp\htdocs\www\MVC\Core\Controller.php(46): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('index', Array)
+#4 C:\xampp\htdocs\www\MVC\public\index.php(48): Core\Router->dispatch('')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\View.php' on line 38
+[23-Jul-2023 11:26:25 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "Twig\Loader\FilesystemLoader" not found'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\App\Controllers\Home.php(49): Core\View::renderTemplate('Home/index.html', Array)
+#1 [internal function]: App\Controllers\Home->indexAction()
+#2 C:\xampp\htdocs\www\MVC\Core\Controller.php(46): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('index', Array)
+#4 C:\xampp\htdocs\www\MVC\public\index.php(48): Core\Router->dispatch('')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\View.php' on line 38
+[23-Jul-2023 11:26:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Twig\Loader\FilesystemLoader" not found in C:\xampp\htdocs\www\MVC\Core\View.php:38
+Stack trace:
+#0 C:\xampp\htdocs\www\MVC\Core\Error.php(68): Core\View::renderTemplate('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(Error))
+#2 {main}
+  thrown in C:\xampp\htdocs\www\MVC\Core\View.php on line 38
+[23-Jul-2023 11:26:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Twig\Loader\FilesystemLoader" not found in C:\xampp\htdocs\www\MVC\Core\View.php:38
+Stack trace:
+#0 C:\xampp\htdocs\www\MVC\Core\Error.php(68): Core\View::renderTemplate('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(Error))
+#2 {main}
+  thrown in C:\xampp\htdocs\www\MVC\Core\View.php on line 38
+[23-Jul-2023 11:26:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Twig\Loader\FilesystemLoader" not found in C:\xampp\htdocs\www\MVC\Core\View.php:38
+Stack trace:
+#0 C:\xampp\htdocs\www\MVC\Core\Error.php(68): Core\View::renderTemplate('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(Error))
+#2 {main}
+  thrown in C:\xampp\htdocs\www\MVC\Core\View.php on line 38
+[23-Jul-2023 11:28:42 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "Twig\Loader\FilesystemLoader" not found'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\App\Controllers\Home.php(49): Core\View::renderTemplate('Home/index.html', Array)
+#1 [internal function]: App\Controllers\Home->indexAction()
+#2 C:\xampp\htdocs\www\MVC\Core\Controller.php(46): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('index', Array)
+#4 C:\xampp\htdocs\www\MVC\public\index.php(48): Core\Router->dispatch('')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\View.php' on line 38
+[23-Jul-2023 11:28:42 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Twig\Loader\FilesystemLoader" not found in C:\xampp\htdocs\www\MVC\Core\View.php:38
+Stack trace:
+#0 C:\xampp\htdocs\www\MVC\Core\Error.php(68): Core\View::renderTemplate('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(Error))
+#2 {main}
+  thrown in C:\xampp\htdocs\www\MVC\Core\View.php on line 38
+[23-Jul-2023 11:28:42 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "Twig\Loader\FilesystemLoader" not found'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\App\Controllers\Home.php(49): Core\View::renderTemplate('Home/index.html', Array)
+#1 [internal function]: App\Controllers\Home->indexAction()
+#2 C:\xampp\htdocs\www\MVC\Core\Controller.php(46): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('index', Array)
+#4 C:\xampp\htdocs\www\MVC\public\index.php(48): Core\Router->dispatch('')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\View.php' on line 38
+[23-Jul-2023 11:28:42 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Twig\Loader\FilesystemLoader" not found in C:\xampp\htdocs\www\MVC\Core\View.php:38
+Stack trace:
+#0 C:\xampp\htdocs\www\MVC\Core\Error.php(68): Core\View::renderTemplate('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(Error))
+#2 {main}
+  thrown in C:\xampp\htdocs\www\MVC\Core\View.php on line 38
+[23-Jul-2023 11:28:42 Europe/Berlin] Uncaught exception: 'Exception' with message 'NO route matched.'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\public\index.php(48): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\Router.php' on line 147
+[23-Jul-2023 11:28:42 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Twig\Loader\FilesystemLoader" not found in C:\xampp\htdocs\www\MVC\Core\View.php:38
+Stack trace:
+#0 C:\xampp\htdocs\www\MVC\Core\Error.php(68): Core\View::renderTemplate('404.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(Exception))
+#2 {main}
+  thrown in C:\xampp\htdocs\www\MVC\Core\View.php on line 38
+[23-Jul-2023 11:30:15 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "Twig\Loader\FilesystemLoader" not found'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\App\Controllers\Home.php(49): Core\View::renderTemplate('Home/index.html', Array)
+#1 [internal function]: App\Controllers\Home->indexAction()
+#2 C:\xampp\htdocs\www\MVC\Core\Controller.php(46): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('index', Array)
+#4 C:\xampp\htdocs\www\MVC\public\index.php(48): Core\Router->dispatch('')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\View.php' on line 38
+[23-Jul-2023 11:30:15 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "Twig\Loader\FilesystemLoader" not found in C:\xampp\htdocs\www\MVC\Core\View.php:38
+Stack trace:
+#0 C:\xampp\htdocs\www\MVC\Core\Error.php(68): Core\View::renderTemplate('500.html')
+#1 [internal function]: Core\Error::exceptionHandler(Object(Error))
+#2 {main}
+  thrown in C:\xampp\htdocs\www\MVC\Core\View.php on line 38
+[23-Jul-2023 11:30:41 Europe/Berlin] Uncaught exception: 'Exception' with message 'NO route matched.'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\public\index.php(48): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\Router.php' on line 147
+[23-Jul-2023 11:35:53 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'mvcuser.posts' doesn't exist'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\App\Models\Post.php(33): PDO->query('SELECT id, titl...')
+#1 C:\xampp\htdocs\www\MVC\App\Controllers\Posts.php(22): App\Models\Post::getAll()
+#2 [internal function]: App\Controllers\Posts->indexAction()
+#3 C:\xampp\htdocs\www\MVC\Core\Controller.php(46): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('index', Array)
+#5 C:\xampp\htdocs\www\MVC\public\index.php(48): Core\Router->dispatch('posts/index')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\App\Models\Post.php' on line 33
+[23-Jul-2023 17:36:19 Europe/Berlin] Uncaught exception: 'Exception' with message 'NO route matched.'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\public\index.php(48): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\Router.php' on line 147
+[23-Jul-2023 17:42:54 Europe/Berlin] Uncaught exception: 'Error' with message 'Undefined constant "App\Controllers\use\Core\View"'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\public\index.php(23): require()
+#1 [internal function]: {closure}('App\\Controllers...')
+#2 C:\xampp\htdocs\www\MVC\Core\Router.php(127): class_exists('App\\Controllers...')
+#3 C:\xampp\htdocs\www\MVC\public\index.php(48): Core\Router->dispatch('signup/new')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\App\Controllers\Signup.php' on line 5

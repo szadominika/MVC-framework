@@ -1,0 +1,13 @@
+[01-Aug-2023 20:52:38 Europe/Berlin] Uncaught exception: 'Exception' with message 'NO route matched.'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\public\index.php(48): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\Router.php' on line 147
+[01-Aug-2023 21:22:31 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'szaja.dominika@gmail.com' for key 'email''
+Stack trace: #0 C:\xampp\htdocs\www\MVC\App\Models\User.php(56): PDOStatement->execute()
+#1 C:\xampp\htdocs\www\MVC\App\Controllers\Signup.php(34): App\Models\User->save()
+#2 [internal function]: App\Controllers\Signup->createAction()
+#3 C:\xampp\htdocs\www\MVC\Core\Controller.php(46): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('create', Array)
+#5 C:\xampp\htdocs\www\MVC\public\index.php(48): Core\Router->dispatch('signup/create')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\App\Models\User.php' on line 56
