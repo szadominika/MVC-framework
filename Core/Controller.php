@@ -2,6 +2,8 @@
 
 namespace Core;
 
+use \App\Auth;
+
 /**
  * Base controller
  */
@@ -69,4 +71,34 @@ abstract class Controller
     protected function after()
     {
     }
+
+    /**
+     * Redirect to different page
+     * 
+     * @param string $url the relative url
+     * 
+     * @return  void
+     */
+    public function redirect($url) 
+    {
+        header('Location: http://' . $_SERVER['HTTP_HOST'] . $url , true, 303);
+          exit;
+    }
+
+    /**
+     * require the user to be logged in before giving access to the required page
+     * remember the requested page for later, then redirect to the login page
+     * 
+     * @return void
+     */
+
+     public function requireLogin ()
+     {
+        if (! Auth::getUser()) {
+
+            Auth::rememberRequestedPage();
+
+            $this->redirect('/login');
+        }
+     }
 }

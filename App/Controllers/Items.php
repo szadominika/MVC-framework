@@ -6,20 +6,19 @@ use \Core\View;
 use \App\Auth;
 
 /**
- * Home controller
- *
- * PHP version 7.0
+ * Items controller (example)
  */
-class Home extends \Core\Controller
+class Items extends Authenticated
 {
-
     /**
-     * Show the index page
+     * Items index
      *
      * @return void
      */
     public function indexAction()
     {
-        View::renderTemplate('Home/index.html');
+        
+
+        View::renderTemplate('Items/index.html');
     }
 }

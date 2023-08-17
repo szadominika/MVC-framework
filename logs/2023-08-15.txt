@@ -1,0 +1,30 @@
+[15-Aug-2023 11:25:50 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "App\Controllers\Viw" not found'
+Stack trace: #0 [internal function]: App\Controllers\Items->indexAction()
+#1 C:\xampp\htdocs\www\MVC\Core\Controller.php(46): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('index', Array)
+#3 C:\xampp\htdocs\www\MVC\public\index.php(55): Core\Router->dispatch('items/index')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\App\Controllers\Items.php' on line 19
+[15-Aug-2023 11:45:53 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Auth::rememberRequstedPage()'
+Stack trace: #0 [internal function]: App\Controllers\Items->indexAction()
+#1 C:\xampp\htdocs\www\MVC\Core\Controller.php(46): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('index', Array)
+#3 C:\xampp\htdocs\www\MVC\public\index.php(55): Core\Router->dispatch('items/index')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\App\Controllers\Items.php' on line 23
+[15-Aug-2023 11:47:20 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method App\Auth::rememberRequstedPage()'
+Stack trace: #0 [internal function]: App\Controllers\Items->indexAction()
+#1 C:\xampp\htdocs\www\MVC\Core\Controller.php(46): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('index', Array)
+#3 C:\xampp\htdocs\www\MVC\public\index.php(55): Core\Router->dispatch('items/index')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\App\Controllers\Items.php' on line 23
+[15-Aug-2023 11:48:17 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined array key "REQUEST_URL"'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\App\Auth.php(71): Core\Error::errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 71)
+#1 C:\xampp\htdocs\www\MVC\App\Controllers\Items.php(23): App\Auth::rememberRequestedPage()
+#2 [internal function]: App\Controllers\Items->indexAction()
+#3 C:\xampp\htdocs\www\MVC\Core\Controller.php(46): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('index', Array)
+#5 C:\xampp\htdocs\www\MVC\public\index.php(55): Core\Router->dispatch('items/index')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\App\Auth.php' on line 71
