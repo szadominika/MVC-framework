@@ -1,0 +1,20 @@
+[16-Aug-2023 21:31:33 Europe/Berlin] Uncaught exception: 'Exception' with message 'NO route matched.'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\public\index.php(55): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\Router.php' on line 147
+[16-Aug-2023 22:08:27 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "App\User" not found'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\App\Controllers\Home.php(23): App\Auth::getUser()
+#1 [internal function]: App\Controllers\Home->indexAction()
+#2 C:\xampp\htdocs\www\MVC\Core\Controller.php(48): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('index', Array)
+#4 C:\xampp\htdocs\www\MVC\public\index.php(55): Core\Router->dispatch('')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\App\Auth.php' on line 91
+[16-Aug-2023 22:08:37 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "App\User" not found'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\App\Controllers\Home.php(23): App\Auth::getUser()
+#1 [internal function]: App\Controllers\Home->indexAction()
+#2 C:\xampp\htdocs\www\MVC\Core\Controller.php(48): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('index', Array)
+#4 C:\xampp\htdocs\www\MVC\public\index.php(55): Core\Router->dispatch('')
+#5 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\App\Auth.php' on line 91

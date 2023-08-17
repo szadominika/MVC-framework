@@ -1,0 +1,36 @@
+[14-Aug-2023 16:06:12 Europe/Berlin] Uncaught exception: 'Exception' with message 'NO route matched.'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\public\index.php(49): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\Router.php' on line 147
+[14-Aug-2023 16:29:45 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method Core\View::tenderTemplate()'
+Stack trace: #0 [internal function]: App\Controllers\Login->createAction()
+#1 C:\xampp\htdocs\www\MVC\Core\Controller.php(46): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('create', Array)
+#3 C:\xampp\htdocs\www\MVC\public\index.php(49): Core\Router->dispatch('login/create')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\App\Controllers\Login.php' on line 42
+[14-Aug-2023 16:29:55 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method Core\View::tenderTemplate()'
+Stack trace: #0 [internal function]: App\Controllers\Login->createAction()
+#1 C:\xampp\htdocs\www\MVC\Core\Controller.php(46): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('create', Array)
+#3 C:\xampp\htdocs\www\MVC\public\index.php(49): Core\Router->dispatch('login/create')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\App\Controllers\Login.php' on line 42
+[14-Aug-2023 16:30:52 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method Core\View::tenderTemplate()'
+Stack trace: #0 [internal function]: App\Controllers\Login->createAction()
+#1 C:\xampp\htdocs\www\MVC\Core\Controller.php(46): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('create', Array)
+#3 C:\xampp\htdocs\www\MVC\public\index.php(49): Core\Router->dispatch('login/create')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\App\Controllers\Login.php' on line 42
+[14-Aug-2023 16:30:58 Europe/Berlin] Uncaught exception: 'Exception' with message 'NO route matched.'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\public\index.php(49): Core\Router->dispatch('1303')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\Router.php' on line 147
+[14-Aug-2023 16:33:13 Europe/Berlin] Uncaught exception: 'Error' with message 'Call to undefined method Core\View::tenderTemplate()'
+Stack trace: #0 [internal function]: App\Controllers\Login->createAction()
+#1 C:\xampp\htdocs\www\MVC\Core\Controller.php(46): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('create', Array)
+#3 C:\xampp\htdocs\www\MVC\public\index.php(49): Core\Router->dispatch('login/create')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\App\Controllers\Login.php' on line 44
