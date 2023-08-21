@@ -1,0 +1,16 @@
+.alert {
+    border: 1px solid #ccc;
+    padding: 6px;
+  }
+  
+  .alert-info {
+    background-color: #c7ce6e;
+  }
+  
+  .alert-success {
+    background-color: #86dd64;
+  }
+  
+  .alert-warning {
+    background-attachment: #831212;
+  }

@@ -1,0 +1,36 @@
+[21-Aug-2023 21:36:30 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable $expiry_timestamp'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\App\Models\User.php(187): Core\Error::errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\www\MVC\App\Auth.php(28): App\Models\User->rememberLogin()
+#2 C:\xampp\htdocs\www\MVC\App\Controllers\Login.php(39): App\Auth::login(Object(App\Models\User), true)
+#3 [internal function]: App\Controllers\Login->createAction()
+#4 C:\xampp\htdocs\www\MVC\Core\Controller.php(49): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('create', Array)
+#6 C:\xampp\htdocs\www\MVC\public\index.php(55): Core\Router->dispatch('login/create')
+#7 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\App\Models\User.php' on line 187
+[21-Aug-2023 21:59:18 Europe/Berlin] Uncaught exception: 'Exception' with message 'NO route matched.'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\public\index.php(55): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\Router.php' on line 147
+[21-Aug-2023 22:09:44 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined variable $token_hash'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\App\Models\RememberedLogin.php(70): Core\Error::errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 70)
+#1 C:\xampp\htdocs\www\MVC\App\Auth.php(144): App\Models\RememberedLogin->delete()
+#2 C:\xampp\htdocs\www\MVC\App\Auth.php(65): App\Auth::forgetLogin()
+#3 C:\xampp\htdocs\www\MVC\App\Controllers\Login.php(63): App\Auth::logout()
+#4 [internal function]: App\Controllers\Login->destroyAction()
+#5 C:\xampp\htdocs\www\MVC\Core\Controller.php(49): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('destroy', Array)
+#7 C:\xampp\htdocs\www\MVC\public\index.php(55): Core\Router->dispatch('logout')
+#8 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\App\Models\RememberedLogin.php' on line 70
+[21-Aug-2023 22:09:44 Europe/Berlin] PHP Fatal error:  Uncaught ErrorException: session_regenerate_id(): Session ID cannot be regenerated when there is no active session in C:\xampp\htdocs\www\MVC\App\Auth.php:23
+Stack trace:
+#0 [internal function]: Core\Error::errorHandler(2, 'session_regener...', 'C:\\xampp\\htdocs...', 23)
+#1 C:\xampp\htdocs\www\MVC\App\Auth.php(23): session_regenerate_id(true)
+#2 C:\xampp\htdocs\www\MVC\App\Auth.php(122): App\Auth::login(Object(App\Models\User), false)
+#3 C:\xampp\htdocs\www\MVC\App\Auth.php(101): App\Auth::loginFromRememberCookie()
+#4 C:\xampp\htdocs\www\MVC\Core\View.php(40): App\Auth::getUser()
+#5 C:\xampp\htdocs\www\MVC\Core\Error.php(68): Core\View::renderTemplate('500.html')
+#6 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#7 {main}
+  thrown in C:\xampp\htdocs\www\MVC\App\Auth.php on line 23
