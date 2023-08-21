@@ -1,0 +1,15 @@
+[17-Aug-2023 20:15:46 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "App\Controllers\Flash" not found'
+Stack trace: #0 [internal function]: App\Controllers\Login->createAction()
+#1 C:\xampp\htdocs\www\MVC\Core\Controller.php(49): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('create', Array)
+#3 C:\xampp\htdocs\www\MVC\public\index.php(55): Core\Router->dispatch('login/create')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\App\Controllers\Login.php' on line 39
+[17-Aug-2023 20:27:45 Europe/Berlin] Uncaught exception: 'Exception' with message 'NO route matched.'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\public\index.php(55): Core\Router->dispatch('css/styles.css')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\Router.php' on line 147
+[17-Aug-2023 20:27:48 Europe/Berlin] Uncaught exception: 'Exception' with message 'NO route matched.'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\public\index.php(55): Core\Router->dispatch('css/styles.css')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\Router.php' on line 147
