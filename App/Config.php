@@ -45,4 +45,28 @@ class Config
      * @var boolean
      */
     const SECRET_KEY = 'UCbz7rXmJdW8Rjb4yItgqUoFtsy0hYzd';
+
+    
+   /**
+     * Set the SMTP server to send through
+     * @var string
+     */
+    const SMTP_HOST = 'smtp.gmail.com';
+
+    
+    /**
+     * Set the  SMTP username
+     * @var string
+     */
+    const SMTP_USER = 'konto.robocze.dominika@gmail.com';
+
+    
+    /**
+     * Set the  SMTP password
+     * @var string
+     */
+    const SMTP_PASS = 'jtolhaawrtqngrjy';
+
+  
+
 }

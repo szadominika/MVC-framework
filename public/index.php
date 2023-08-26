@@ -11,18 +11,18 @@ ini_set('session.cookie_lifetime', '864000');
  //require_once '/path/to/vendor/autoload.php';
  //require_once dirname(__DIR__) . '/vendor/vendor/autoload.php';
 //phpinfo();
-require '../vendor/vendor/autoload.php';
+require '../vendor/autoload.php';
 //require dirname(__DIR__) . '/vendor/vendor/autoload.php';
 /**
  * Autoloader
  */
-spl_autoload_register(function ($class) {
+/*spl_autoload_register(function ($class) {
     $root = dirname(__DIR__);   // get the parent directory
     $file = $root . '/' . str_replace('\\', '/', $class) . '.php';
     if (is_readable($file)) {
         require $root . '/' . str_replace('\\', '/', $class) . '.php';
     }
-});
+});*/
 
 /**
  * Error and Exceptions handling
