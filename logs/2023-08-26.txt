@@ -1,0 +1,44 @@
+[26-Aug-2023 17:30:54 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Undefined property: App\Models\User::$expiry_timestamp'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\App\Models\User.php(241): Core\Error::errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 241)
+#1 C:\xampp\htdocs\www\MVC\App\Models\User.php(215): App\Models\User->startPasswordReset()
+#2 C:\xampp\htdocs\www\MVC\App\Controllers\Password.php(30): App\Models\User::sendPasswordReset('kot@o2.pl')
+#3 [internal function]: App\Controllers\Password->requestResetAction()
+#4 C:\xampp\htdocs\www\MVC\Core\Controller.php(49): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('requestReset', Array)
+#6 C:\xampp\htdocs\www\MVC\public\index.php(55): Core\Router->dispatch('password/reques...')
+#7 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\App\Models\User.php' on line 241
+[26-Aug-2023 17:31:33 Europe/Berlin] Uncaught exception: 'ParseError' with message 'syntax error, unexpected token "}"'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\vendor\composer\ClassLoader.php(433): Composer\Autoload\{closure}('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\www\MVC\App\Controllers\Password.php(30): Composer\Autoload\ClassLoader->loadClass('App\\Models\\User')
+#2 [internal function]: App\Controllers\Password->requestResetAction()
+#3 C:\xampp\htdocs\www\MVC\Core\Controller.php(49): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('requestReset', Array)
+#5 C:\xampp\htdocs\www\MVC\public\index.php(55): Core\Router->dispatch('password/reques...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\App\Models\User.php' on line 218
+[26-Aug-2023 17:43:01 Europe/Berlin] Uncaught exception: 'Exception' with message 'NO route matched.'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\public\index.php(55): Core\Router->dispatch('password/reset/...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\Router.php' on line 147
+[26-Aug-2023 17:44:18 Europe/Berlin] Uncaught exception: 'Exception' with message 'NO route matched.'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\public\index.php(55): Core\Router->dispatch('password/reset/...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\Router.php' on line 147
+[26-Aug-2023 17:44:36 Europe/Berlin] Uncaught exception: 'Exception' with message 'NO route matched.'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\public\index.php(55): Core\Router->dispatch('password/reset/...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\Router.php' on line 147
+[26-Aug-2023 17:58:17 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "App\Models\View" not found'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\App\Models\User.php(218): App\Models\User->sendPasswordResetEmail()
+#1 C:\xampp\htdocs\www\MVC\App\Controllers\Password.php(30): App\Models\User::sendPasswordReset('szaja.dominika@...')
+#2 [internal function]: App\Controllers\Password->requestResetAction()
+#3 C:\xampp\htdocs\www\MVC\Core\Controller.php(49): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('requestReset', Array)
+#5 C:\xampp\htdocs\www\MVC\public\index.php(55): Core\Router->dispatch('password/reques...')
+#6 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\App\Models\User.php' on line 261
+[26-Aug-2023 18:01:08 Europe/Berlin] Uncaught exception: 'Exception' with message 'NO route matched.'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\public\index.php(55): Core\Router->dispatch('password/reset/...')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\Router.php' on line 147
