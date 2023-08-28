@@ -1,0 +1,12 @@
+[27-Aug-2023 17:40:05 Europe/Berlin] Uncaught exception: 'Exception' with message 'NO route matched.'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\public\index.php(56): Core\Router->dispatch('js/app.js')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\Router.php' on line 147
+[27-Aug-2023 17:40:18 Europe/Berlin] Uncaught exception: 'Exception' with message 'NO route matched.'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\public\index.php(56): Core\Router->dispatch('js/app.js')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\Router.php' on line 147
+[27-Aug-2023 17:40:22 Europe/Berlin] Uncaught exception: 'Exception' with message 'NO route matched.'
+Stack trace: #0 C:\xampp\htdocs\www\MVC\public\index.php(56): Core\Router->dispatch('js/app.js')
+#1 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\Core\Router.php' on line 147
