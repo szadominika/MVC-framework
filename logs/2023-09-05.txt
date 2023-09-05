@@ -1,0 +1,21 @@
+[05-Sep-2023 20:16:23 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "App\Controllers\Flash" not found'
+Stack trace: #0 [internal function]: App\Controllers\Profile->updateAction()
+#1 C:\xampp\htdocs\www\MVC\Core\Controller.php(49): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('update', Array)
+#3 C:\xampp\htdocs\www\MVC\public\index.php(57): Core\Router->dispatch('profile/update')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\App\Controllers\Profile.php' on line 49
+[05-Sep-2023 20:20:17 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "App\Controllers\Flash" not found'
+Stack trace: #0 [internal function]: App\Controllers\Profile->updateAction()
+#1 C:\xampp\htdocs\www\MVC\Core\Controller.php(49): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('update', Array)
+#3 C:\xampp\htdocs\www\MVC\public\index.php(57): Core\Router->dispatch('profile/update')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\App\Controllers\Profile.php' on line 49
+[05-Sep-2023 20:21:29 Europe/Berlin] Uncaught exception: 'Error' with message 'Class "App\Controllers\Flash" not found'
+Stack trace: #0 [internal function]: App\Controllers\Profile->updateAction()
+#1 C:\xampp\htdocs\www\MVC\Core\Controller.php(49): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\www\MVC\Core\Router.php(134): Core\Controller->__call('update', Array)
+#3 C:\xampp\htdocs\www\MVC\public\index.php(57): Core\Router->dispatch('profile/update')
+#4 {main}
+Thrown in 'C:\xampp\htdocs\www\MVC\App\Controllers\Profile.php' on line 49
