@@ -2,35 +2,35 @@
 
 {% block title %}Reset password{% endblock %}
 
-{% block footer%}
-    <script src="/js/hideShowPassword.min.js"></script>   
-    <script src="/js/app.js"> </script> 
-    <script> 
-    
+{% block footer %}
+    <script src="/js/hideShowPassword.min.js"></script>
+    <script src="/js/app.js"></script>
+
+    <script>
         $(document).ready(function() {
 
+            /**
+             * Validate the form
+             */
             $('#formPassword').validate({
                 rules: {
                     password: {
                         required: true,
                         minlength: 6,
                         validPassword: true
-                    },
-                },
-                
+                    }
+                }
             });
-                    /**
-         *show password toggle button 
-         */
-        $('#inputPassword').hideShowPassword({
-            show: false,
-            innerToggle: 'focus'
-        });
-        });
 
 
-    
-    
+            /**
+              * Show password toggle button
+              */
+            $('#inputPassword').hideShowPassword({
+                show: false,
+                innerToggle: 'focus'
+            });
+        });
     </script>
 
 {% endblock %}
@@ -48,16 +48,16 @@
         </ul>
     {% endif %}
 
-    <form method="post"  id="formPassword" action="/password/reset-password">
+    <form method="post" id="formPassword" action="/password/reset-password">
 
         <input type="hidden" name="token" value="{{ token }}" />
 
-        <div>
-            <label for="inputPassword">New password</label>
-            <input type="password" id="inputPassword" name="password" placeholder="Password" required />
+        <div class="form-group">
+            <label for="inputPassword">Password</label>
+            <input type="password" id="inputPassword" name="password" placeholder="Password" required class="form-control" />
         </div>
 
-        <button type="submit">Reset password</button>
+        <button type="submit" class="btn btn-default">Reset password</button>
 
     </form>
 

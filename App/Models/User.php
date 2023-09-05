@@ -47,8 +47,12 @@ class User extends \Core\Model
 
             $password_hash = password_hash($this->password, PASSWORD_DEFAULT);
 
-            $sql = 'INSERT INTO users (name, email, password_hash)
-                    VALUES (:name, :email, :password_hash)';
+            $token = new Token();
+            $hashed_token = $token->getHash();
+            $this->activation_token = $token->getValue();
+
+            $sql = 'INSERT INTO users (name, email, password_hash, activation_hash)
+                    VALUES (:name, :email, :password_hash, :activation_hash)';
 
             $db = static::getDB();
             $stmt = $db->prepare($sql);
@@ -56,6 +60,7 @@ class User extends \Core\Model
             $stmt->bindValue(':name', $this->name, PDO::PARAM_STR);
             $stmt->bindValue(':email', $this->email, PDO::PARAM_STR);
             $stmt->bindValue(':password_hash', $password_hash, PDO::PARAM_STR);
+            $stmt->bindValue(':activation_hash', $hashed_token, PDO::PARAM_STR);
 
             return $stmt->execute();
         }
@@ -84,16 +89,19 @@ class User extends \Core\Model
         }
 
         // Password
-        if (strlen($this->password) < 6) {
-            $this->errors[] = 'Please enter at least 6 characters for the password';
-        }
+        if (isset($this->password)) {
 
-        if (preg_match('/.*[a-z]+.*/i', $this->password) == 0) {
-            $this->errors[] = 'Password needs at least one letter';
-        }
+            if (strlen($this->password) < 6) {
+                $this->errors[] = 'Please enter at least 6 characters for the password';
+            }
 
-        if (preg_match('/.*\d+.*/i', $this->password) == 0) {
-            $this->errors[] = 'Password needs at least one number';
+            if (preg_match('/.*[a-z]+.*/i', $this->password) == 0) {
+                $this->errors[] = 'Password needs at least one letter';
+            }
+
+            if (preg_match('/.*\d+.*/i', $this->password) == 0) {
+                $this->errors[] = 'Password needs at least one number';
+            }
         }
     }
 
@@ -141,7 +149,7 @@ class User extends \Core\Model
     }
 
     /**
-     * Authenticate a user by email and password.
+     * Authenticate a user by email and password. User account has to be active.
      *
      * @param string $email email address
      * @param string $password password
@@ -152,7 +160,7 @@ class User extends \Core\Model
     {
         $user = static::findByEmail($email);
 
-        if ($user) {
+        if ($user && $user->is_active) {
             if (password_verify($password, $user->password_hash)) {
                 return $user;
             }
@@ -268,18 +276,18 @@ class User extends \Core\Model
     {
         $url = 'http://' . $_SERVER['HTTP_HOST'] . '/password/reset/' . $this->password_reset_token;
 
-        $text = View::getTemplate('Password/reset_email.txt', ['url' =>$url]);
-        $html = View::getTemplate('Password/reset_email.html', ['url' =>$url]);
+        $text = View::getTemplate('Password/reset_email.txt', ['url' => $url]);
+        $html = View::getTemplate('Password/reset_email.html', ['url' => $url]);
 
         Mail::send($this->email, 'Password reset', $text, $html);
     }
 
     /**
-     * find a user model by password reset token and expiry
-     * 
+     * Find a user model by password reset token and expiry
+     *
      * @param string $token Password reset token sent to user
-     * 
-     * @return mixed User object if found and the token hasn,t expired, null otherwise
+     *
+     * @return mixed User object if found and the token hasn't expired, null otherwise
      */
     public static function findByPasswordReset($token)
     {
@@ -306,7 +314,6 @@ class User extends \Core\Model
             if (strtotime($user->password_reset_expires_at) > time()) {
 
                 return $user;
-
             }
         }
     }
@@ -337,14 +344,106 @@ class User extends \Core\Model
             $db = static::getDB();
             $stmt = $db->prepare($sql);
 
-            $stmt->bindValue(':id' , $this->id, PDO::PARAM_INT);
-            $stmt->bindValue(':password_hash' , $password_hash, PDO::PARAM_STR);
+            $stmt->bindValue(':id', $this->id, PDO::PARAM_INT);
+            $stmt->bindValue(':password_hash', $password_hash, PDO::PARAM_STR);
 
-           return $stmt->execute();
+            return $stmt->execute();
         }
-        return false;
-    
-    }
-    
 
+        return false;
+    }
+
+    /**
+     * Send an email to the user containing the activation link
+     *
+     * @return void
+     */
+    public function sendActivationEmail()
+    {
+        $url = 'http://' . $_SERVER['HTTP_HOST'] . '/signup/activate/' . $this->activation_token;
+
+        $text = View::getTemplate('Signup/activation_email.txt', ['url' => $url]);
+        $html = View::getTemplate('Signup/activation_email.html', ['url' => $url]);
+
+        Mail::send($this->email, 'Account activation', $text, $html);
+    }
+
+    /**
+     * Activate the user account with the specified activation token
+     *
+     * @param string $value Activation token from the URL
+     *
+     * @return void
+     */
+    public static function activate($value)
+    {
+        $token = new Token($value);
+        $hashed_token = $token->getHash();
+
+        $sql = 'UPDATE users
+                SET is_active = 1,
+                    activation_hash = null
+                WHERE activation_hash = :hashed_token';
+
+        $db = static::getDB();
+        $stmt = $db->prepare($sql);
+
+        $stmt->bindValue(':hashed_token', $hashed_token, PDO::PARAM_STR);
+
+        $stmt->execute();
+    }
+
+    /**
+     * Update the user's profile
+     *
+     * @param array $data Data from the edit profile form
+     *
+     * @return boolean  True if the data was updated, false otherwise
+     */
+
+    public function updateProfile($data)
+    {
+        $this->name = $data['name'];
+        $this->email = $data['email'];
+
+        // Only validate and update the password if a value provided
+        if ($data['password'] != '') {
+            $this->password = $data['password'];
+        }
+
+        $this->validate();
+
+        if (empty($this->errors)) {
+
+            $sql = 'UPDATE users
+                    SET name = :name,
+                        email = :email';
+
+            // Add password if it's set
+            if (isset($this->password)) {
+                $sql .= ', password_hash = :password_hash';
+            }
+
+            $sql .= "\nWHERE id = :id";
+
+            $db = static::getDB();
+            $stmt = $db->prepare($sql);
+
+            $stmt->bindValue(':name', $this->name, PDO::PARAM_STR);
+            $stmt->bindValue(':email', $this->email, PDO::PARAM_STR);
+            $stmt->bindValue(':id', $this->id, PDO::PARAM_INT);
+
+            // Add password if it's set
+            if (isset($this->password)) {
+                $password_hash = password_hash($this->password, PASSWORD_DEFAULT);
+                $stmt->bindValue(':password_hash', $password_hash, PDO::PARAM_STR);
+            }
+
+            return $stmt->execute();
+        }
+
+        return false;
+    }
+
+    
 }
